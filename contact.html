@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordGuesser | Contact Us</title>
+  <meta
+    name="description"
+    content="Contact WordGuesser with a quick message for support, privacy questions, feature ideas, or business inquiries.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="Logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contact">
+  <div class="bg-orb bg-orb-one"></div>
+  <div class="bg-orb bg-orb-two"></div>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="WordGuesser home">
+        <span class="brand-mark">
+          <img class="brand-logo" src="Logo.png" alt="">
+        </span>
+        <span class="brand-text">WordGuesser</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="privacy.html" class="nav-link">Privacy + EULA</a>
+        <a href="contact.html" class="nav-link active">Contact Us</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container contact-main">
+    <section class="contact-form-panel" data-reveal>
+      <div class="section-heading compact-heading">
+        <p class="eyebrow">Contact Us</p>
+        <h2>Send us a quick message.</h2>
+        <p class="status-note">HQ: Netherlands / EU</p>
+      </div>
+
+      <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="d264d533-1f55-48e6-bbca-fd6e25037577">
+        <input type="hidden" id="web3Subject" name="subject" value="WordGuesser Support">
+        <div class="form-grid">
+          <label class="field">
+            <span>Name</span>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Topic</span>
+          <select id="topic" name="topic">
+            <option value="Support">Support</option>
+            <option value="Privacy Request">Privacy Request</option>
+            <option value="Feature Idea">Feature Idea</option>
+            <option value="Business">Business</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Message</span>
+          <textarea id="message" name="message" rows="7" placeholder="Tell us what is going on." required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="button button-primary">Send Message</button>
+          <p class="status-note" id="formStatus">This form sends directly from the website.</p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div>
+        <p class="footer-brand">WordGuesser</p>
+        <p class="footer-copy">Fast party game fun in a blue, easy-to-use package.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy + EULA</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <p class="footer-copy">&copy; <span id="year"></span> WordGuesser. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

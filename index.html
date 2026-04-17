@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordGuesser | Fast Party Game</title>
+  <meta
+    name="description"
+    content="WordGuesser is a fast party game with four quick modes, custom words, and instant group play.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="Logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <div class="bg-orb bg-orb-one"></div>
+  <div class="bg-orb bg-orb-two"></div>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="WordGuesser home">
+        <span class="brand-mark">
+          <img class="brand-logo" src="Logo.png" alt="">
+        </span>
+        <span class="brand-text">WordGuesser</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="privacy.html" class="nav-link">Privacy + EULA</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-simple container">
+      <div class="hero-copy hero-panel" data-reveal>
+        <p class="eyebrow">Fun party games</p>
+        <h1>Pick a mode and start playing.</h1>
+        <p class="hero-text">
+          Four quick party modes, fast rounds, and custom words for instant group play.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#">Download now on iOS</a>
+          <a class="button button-secondary" href="privacy.html">Privacy + EULA</a>
+          <a class="button button-secondary" href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="mode-strip" aria-label="Game modes">
+          <button
+            class="mode-chip"
+            type="button"
+            data-mode-title="Speed Guesser"
+            data-mode-summary="Put the phone on your forehead while your team gives clues without saying the word. Tilt up to score, tilt down to skip, and get through as many words as you can before time runs out.">
+            Speed Guesser
+          </button>
+          <button
+            class="mode-chip"
+            type="button"
+            data-mode-title="Long Guesser"
+            data-mode-summary="Place the phone on your forehead while everyone else sees the answer and gives clues. You only get one question before locking in your guess, then the phone moves to the next player.">
+            Long Guesser
+          </button>
+          <button
+            class="mode-chip"
+            type="button"
+            data-mode-title="Describe the Word"
+            data-mode-summary="One player describes the target word while everyone else guesses. You cannot say the target word or the taboo words on the card, and when someone gets it right both players score.">
+            Describe the Word
+          </button>
+          <button
+            class="mode-chip"
+            type="button"
+            data-mode-title="6 Second Rule"
+            data-mode-summary="Show the next player the prompt, start the timer, and they have six seconds to answer while the question stays visible. If they miss, one other player gets a single steal attempt before the round moves on.">
+            6 Second Rule
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="mode-modal" id="modeModal" hidden>
+      <div class="mode-modal-backdrop" data-close-mode-modal></div>
+      <div class="mode-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modeModalTitle">
+        <button class="mode-modal-close" type="button" aria-label="Close" data-close-mode-modal>
+          &times;
+        </button>
+        <p class="mode-modal-eyebrow">How it works</p>
+        <h2 id="modeModalTitle">Game mode</h2>
+        <p class="mode-modal-summary" id="modeModalSummary"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div>
+        <p class="footer-brand">WordGuesser</p>
+        <p class="footer-copy">Fast party game fun.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy + EULA</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <p class="footer-copy">&copy; <span id="year"></span> WordGuesser. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
